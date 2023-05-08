@@ -8,7 +8,7 @@ const vaciarCarritoBtn = document.getElementById('vaciar-carrito');
 cargarEventListeners();
 /*Darle sus funciones de accion del carro de compra */
 function cargarEventListeners(){
-    elementos1.addEventListener('click',comprarElemento);
+    elementos1.addEventListener('click', comprarElemento);
     elementos2.addEventListener('click', comprarElemento);
     carrito.addEventListener('click', eliminarElemento);
     vaciarCarritoBtn.addEventListener('click', vaciarCarrito);
@@ -26,7 +26,7 @@ function leerDatosElemento(elemento){
     const infoElemento = {
         imagen: elemento.querySelector('img').src,
         titulo: elemento.querySelector('h3').textContent,
-        precio: elemento.querySelector('precio').textContent,
+        precio: elemento.querySelector('.precio').textContent,
         id: elemento.querySelector('a').getAttribute('data-id')
     }
     insestarCarrito(infoElemento);
